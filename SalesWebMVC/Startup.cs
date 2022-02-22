@@ -45,6 +45,7 @@ namespace SalesWebMVC
 
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>(); services.AddScoped<DepartmentService>();
+            services.AddScoped<SalesRecordService>();
 
         }
 
@@ -55,9 +56,9 @@ namespace SalesWebMVC
             var localizationOptions = new RequestLocalizationOptions
             {
                 DefaultRequestCulture = new RequestCulture(enUs),
-                SupportedCultures = new List<CultureInfo> { enUs},
-                SupportedUICultures = new List<CultureInfo> { enUs}
-        };
+                SupportedCultures = new List<CultureInfo> { enUs },
+                SupportedUICultures = new List<CultureInfo> { enUs }
+            };
             app.UseRequestLocalization(localizationOptions);
             if (env.IsDevelopment())
             {
