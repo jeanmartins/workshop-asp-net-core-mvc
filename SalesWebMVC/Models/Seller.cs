@@ -26,7 +26,6 @@ namespace SalesWebMVC.Models
         [Required(ErrorMessage = "{0} required")]
         [Range(100.0, 50000.0, ErrorMessage = "{0} must be from {1} to {2}")]
         [Display(Name = "Base Salary")]
-        [DataType(DataType.Currency)]
         public double BaseSalary { get; set; }
 
         public Department Department { get; set; }
